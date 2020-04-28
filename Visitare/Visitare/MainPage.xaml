@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-              xmlns:local="clr-namespace:Visitare;assembly=Visitare"
+             xmlns:local="clr-namespace:Visitare;assembly=Visitare"
              mc:Ignorable="d"
              BackgroundColor="#FDDA8A"
              x:Class="Visitare.MainPage">
@@ -18,20 +18,16 @@
             <Button Text="Wyloguj" BackgroundColor="#439299" FontAttributes="Bold" HorizontalOptions="End"
                 Clicked="OnLogOut" CornerRadius="18" TextColor="Black"/>
         </StackLayout>
-        <StackLayout HeightRequest="400">
-            <local:CustomMap x:Name="customMap" Margin="2" IsShowingUser="true" MapClicked="OnMapClicked">
+        <StackLayout HeightRequest="450">
+            <local:CustomMap x:Name="customMap" Margin="2" IsShowingUser="true">
                 
-            </local:CustomMap>      
-        <Entry x:Name="nazwaEntry" Placeholder="Podaj nazwę punktu:" FontSize="Small" />
-        <Entry x:Name="opisEntry" Placeholder="Opis:" FontSize="Small"/>
-        <Entry x:Name="zagadkaEntry" Placeholder="Zagadka/pytanie do obiektu:" FontSize="Small"/>
-        <Entry x:Name="odpowiedzEntry" Placeholder="Oczekiwana odpowiedź:" FontSize="Small"/>
+            </local:CustomMap>     
         </StackLayout>
         <StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="15" Margin="5">
             <Button Text="Wyczyść" BackgroundColor="#be8feb" FontAttributes="Bold" HorizontalOptions="End"
                 Clicked="OnClearClicked" CornerRadius="25" TextColor="Black"/>
-            <Button Text="Nowa Trasa" BackgroundColor="#be8feb" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
-                Clicked="OnNewRoutesClicked" CornerRadius="25" TextColor="Black"/>
+            <Button Text="Kreator" BackgroundColor="#be8feb" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
+                Clicked="OnCreatorClicked" CornerRadius="25" TextColor="Black"/>
             <Button Text="Trasy" BackgroundColor="#be8feb" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
                 Clicked="OnRoutesClicked" CornerRadius="25" TextColor="Black"/>
         </StackLayout>
