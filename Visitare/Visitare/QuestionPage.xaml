@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Visitare.QuestionPage">
+
+    <StackLayout>
+        <Button Text="Wciśnij aby rozpocząć quiz" BackgroundColor="#be8feb" FontAttributes="Bold" HorizontalOptions="FillAndExpand"
+                Margin="0,150" Clicked="Button_Clicked" CornerRadius="25" TextColor="Black"/>
+
+        <StackLayout>
+            <Label Text="{Binding Text}" TextColor="Black" Margin="10,0"/>
+        </StackLayout>
+        
+      <ListView ItemsSource="{Binding Answers}" ItemTapped="ListView_ItemTapped">
+    </ListView>
+    </StackLayout>
+</ContentPage>
